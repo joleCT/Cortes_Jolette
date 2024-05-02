@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main ()
+{
+    int n1,n2,n3;
+    printf("Ingrese 3 números enteros");
+    scanf("%d",&n1);
+    scanf("%d",&n2);
+    scanf("%d",&n3);
+
+    if(n1=1,n2=2,n3=3) {
+    printf("Acceso permmitido");
+    } else {
+    printf("Acceso negado");
+      return 0;
+}
+}
+
+

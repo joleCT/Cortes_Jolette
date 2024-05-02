@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main ()
+{
+    int h,ph,ssem,pex;
+    printf("Ingrese las horas que trabaja ");
+    scanf("%d",&h);
+    printf("Ingrese el precio cobrado por horas ");
+    scanf("%d",&ph);
+    
+    if(h<=40 ) {
+    ssem=h*ph;
+    printf("el pago semamal es %d:", ssem);
+    }else
+    if(h>40 && h<50){
+        pex=(h-40)*(ph*.5);
+        ssem=40*ph+pex;
+        printf("el pago semamal es %d:", ssem);
+        }else {
+       pex=(h-40)*(ph*2);
+        ssem=40*ph+pex;
+        
+        printf("el salario semanal es:%d ",ssem);
+        }
+     return 0;
+}

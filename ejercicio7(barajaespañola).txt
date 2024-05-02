@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Dame un numero de la baraja española ");
+    scanf("%d",&n);
+    
+    if(n==1) {
+        printf("As");
+    } else {
+        if(n==10) {
+        printf("Sota");
+    } else {
+        if(n==11) {
+        printf("Caballo");
+    } else {
+         if(n==12) {
+        printf("Rey");
+    } else {
+         if(n>=2 && n<=9) {
+        printf("No es figura, ni tampoco As.");
+    } else {
+        printf("Este no es un numero de la baraja española.");
+    
+    }
+    }
+    }
+    }
+    }
+}

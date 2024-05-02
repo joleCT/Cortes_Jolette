@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int opcion;
+    float base1, base2, altura, lado, area;
+
+    printf("CALCULO DE AREAS\n");
+    printf("1- Calcular el área de un triángulo\n");
+    printf("2- Calcular el área de un trapecio\n");
+    printf("3- Calcular el área de un rectángulo\n");
+    printf("Seleccione una opción: ");
+    
+    scanf("%d", &opcion);
+
+    switch(opcion) {
+        
+        
+        case 1:
+        
+            printf("Ingrese la base del triángulo: ");
+            scanf("%f", &base1);
+            printf("Ingrese la altura del triángulo: ");
+            scanf("%f", &altura);
+            area = 0.5 * base1 * altura;
+            printf("El área del triángulo es: %.2f\n", area);
+            
+            break;
+            
+        case 2:
+        
+            printf("Ingrese la base mayor del trapecio: ");
+            scanf("%f", &base1);
+            printf("Ingrese la base menor del trapecio: ");
+            scanf("%f", &base2);
+            printf("Ingrese la altura del trapecio: ");
+            scanf("%f", &altura);
+            area = 0.5 * (base1 + base2) * altura;
+            printf("El área del trapecio es: %.2f\n", area);
+            
+            break;
+            
+        case 3:
+        
+        
+            printf("Ingrese la base del rectángulo: ");
+            scanf("%f", &base1);
+            printf("Ingrese la altura del rectángulo: ");
+            scanf("%f", &altura);
+            area = base1 * altura;
+            printf("El área del rectángulo es: %.2f\n", area);
+            
+            
+            break;
+            
+        default:
+            printf("Opción no válida.\n");
+    }
+
+    return 0;
+}
