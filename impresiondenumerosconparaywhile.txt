@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+int main()
+{
+    
+   printf("Numeros del 1 al 100 mi amor:   ");
+    for(int i=1;i<=100;i++) {
+        printf("%d, ",i+0);
+    }
+    }
+//////////////////////////////////////////////////////7
+
+#include <stdio.h>
+
+int main()
+{
+    
+   printf("Numeros de 2 en 2 nena :   ");
+    for(int i=2;i<=100;i+=2) {
+        printf("%d, ",i+0);
+    }
+    }
+
+
+
+/////////////////////////////////////////////
+
+#include <stdio.h>
+
+int main()
+{
+    
+   printf("Numeros del 100 al 1 bb :   ");
+    for(int i=100;i>=1;i--) {
+        printf("%d, ",i);
+    }
+    }
+
+
+/////////////////////////////////////////////////
+
+#include <stdio.h>
+
+int main()
+{
+    int i=100;
+    while(i>=1) {
+        printf("%d, ",i);
+        i--;
+        
+    }
+
+    return 0;
+}
+
+
+
+////////////////////////////////////////////////
+
+#include <stdio.h>
+
+int main()
+{
+    int i=2;
+    while(i<=100) {
+        printf("%d, ",i);
+        i+=2;
+        
+    }
+
+    return 0;
+}
+
+
+////////////////////////////////////////////
+
+#include <stdio.h>
+
+int main()
+{
+   int i=1 ;
+   while(i<=100){
+       printf("%d, ",i);
+       i++;
+       
+   }
+
+    return 0;
+}
