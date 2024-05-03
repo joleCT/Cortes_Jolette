@@ -1,0 +1,20 @@
+
+
+#include <iostream>
+
+int main()
+{
+    int n,i;
+    printf("sucesion de numeros de 5 en 5 bonita\n");
+    
+    printf( "♥ ❤ ❥ ❣ \n");
+   printf("ingrese la cantidad de numeros que quierre para su serie\n");
+   scanf("%d", &n);
+   
+   for(i=1;i<=n;i++) {
+       printf("%d, ", i*5);
+       
+   }
+   
+    return 0;
+}
