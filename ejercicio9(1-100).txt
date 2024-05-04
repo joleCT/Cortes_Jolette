@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main ()
+{
+
+    printf("Numeros del 1 al 100 bebe ♥:      ");
+    
+    for(int i=1;i<=100;i++) {
+       printf("%d, ",i);
+    }
+}
