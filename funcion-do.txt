@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int numero,suma=0,cantidadnumeros=0;
+    do {
+        printf("introduce un numero : \n");
+        scanf("%d",&numero);
+        if(numero !=0) {
+            printf("has inyroducido el numero %d\n", numero);
+        
+            suma+=numero;
+            cantidadnumeros++;
+        } else {
+            printf("finalizado, se ha introducido el numero 0\n");
+        }
+        }while(numero !=0);
+        printf("cantiidad de numeros introducidos: %d\n", cantidadnumeros);
+        printf("suma de los numeros introducidos: %d ", suma);
+        
+        return 0;
+    }
