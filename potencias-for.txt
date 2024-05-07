@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+
+{
+    int p,n,resultado=1,i;
+
+    printf("ingrea e numero: ");
+    scanf("%d",&n);
+    printf("ingrese a que potencia quiere elevarlo: ");
+    scanf("%d",&p);
+    
+    for(i=0;i<p;i++){
+        resultado=resultado*n;
+        
+    }
+         printf("%d elevado a la potencia %d es %d\n", n,p,resultado);
+
+
+
+    
+    return 0;
+}
