@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    int numero;
+    int mayor, menor;
+    int suma = 0;
+
+    printf("Ingrese 10 números:\n");
+
+    while (i < 10) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &numero);
+
+        if (i == 0) {
+            mayor = numero;
+            menor = numero;
+        } else {
+            if (numero > mayor)
+                mayor = numero;
+            if (numero < menor)
+                menor = numero;
+        }
+
+        
+        suma += numero;
+
+        i++;
+    }
+
+    
+    printf("El número mayor ingresado es: %d\n", mayor);
+    printf("El número menor ingresado es: %d\n", menor);
+    printf("La suma total de los números es: %d\n", suma);
+
+    return 0;
+}
