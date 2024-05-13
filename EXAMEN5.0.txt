@@ -1,0 +1,65 @@
+ #include <stdio.h>
+#include <string.h>
+#include <stdbool.h> 
+
+bool validar_credenciales(char nombre[], char nl[], char gg[]) {
+    if(strcmp(nombre, "JOLETTE") == 0 && strcmp(nl,"5") == 0 && strcmp(gg,"2BMPG") == 0) {
+        return true; 
+    } else {
+        return false; 
+    }
+}
+
+int main() {
+    char nombre[20];
+    char nl[20];
+    char gg[20];
+    int intentos = 3;
+
+    while(intentos > 0) {
+        printf("Introduzca su nombre con mayúsculas: ");
+        scanf("%s", nombre);
+        printf("Introduzca su número de lista: ");
+        scanf("%s", nl);
+        printf("Introduzca su grado y grupo en mayúsculas: ");
+        scanf("%s", gg);
+        
+        if(validar_credenciales(nombre, nl, gg)) {
+            printf("Bienvenido al sistema\n");
+            break;
+        } else {
+            printf("Nombre, número de lista o grupo incorrectos.\n");
+            printf("Intentos restantes: %d\n\n", intentos - 1);
+            intentos--;
+        }
+    }
+
+    if(intentos == 0) {
+        printf("Se ha superado el número de intentos permitidos\n");
+    }
+    
+    float total = 0, precio;
+    int cantidad;
+    
+    printf("Calcula el importe de una factura:\n");
+    do {
+        printf("Introduce la cantidad de unidades vendidas (0 para terminar): ");
+        scanf("%d", &cantidad);
+        
+        if(cantidad == 0) {
+            break;
+        }
+        
+        printf("Introduce el precio unitario: ");
+        scanf("%f", &precio);
+        
+        if(cantidad < 0 || precio < 0) {
+            printf("Error, la cantidad y el precio deben ser números positivos\n");
+            continue;
+        }
+        total += cantidad * precio;
+    } while(cantidad != 0);
+    
+    printf("El importe total de la factura es: $%.2f\n", total);
+    return 0;
+}
