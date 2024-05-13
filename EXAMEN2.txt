@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+// VERSION 2 del examen practico 13-05-2024
+int main()
+{
+char nombre[20];
+char nl[20];
+char gg[20];
+int intentos=3;
+
+while(intentos>0){
+    printf("introduzca su nombre con mayusculas: ");
+    scanf("%s",nombre);
+    printf("introduzca su numero de lista ");
+    scanf("%s",nl);
+    printf("introduzca su grado y grupo en mayusculas ");
+    scanf("%s",gg);
+    
+    if(strcmp(nombre, "JOLETTE") == 0 &&strcmp(nl,"5") == 0 &&strcmp(gg,"2BMPG") ==0) {
+        printf("Bienvenido al sistema? \n ");
+        break;
+    } else {
+        printf("nombre, numero de lista o grupo incorrectos. ");
+        printf("intentso restantes: %d\n\n", intentos-1);
+        intentos--;
+    }
+}
+if(intentos==0){
+printf("Se ha superado el numero de intentos permitidos\n");
+   
+}
+return 0;
+}

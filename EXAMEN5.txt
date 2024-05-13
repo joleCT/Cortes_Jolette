@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <string.h>
+
+//VERSION  examen practico 13-05-2024
+//DEBERA UTILIZAR UNA FUNCION MINIMO
+int validardatos()
+{
+char nombre[20];
+char nl[20];
+char gg[20];
+int intentos=3;
+
+while(intentos>0){
+    printf("introduzca su nombre con mayusculas: ");
+    scanf("%s",nombre);
+    printf("introduzca su numero de lista ");
+    scanf("%s",nl);
+    printf("introduzca su grado y grupo en mayusculas ");
+    scanf("%s",gg);
+    
+    if(strcmp(nombre, "JOLETTE") == 0 &&strcmp(nl,"5") == 0 &&strcmp(gg,"2BMPG") ==0) {
+        printf("Bienvenido al sistema? \n ");
+        break;
+    } else {
+        printf("nombre, numero de lista o grupo incorrectos. ");
+        printf("intentso restantes: %d\n\n", intentos-1);
+        intentos--;
+    }
+}
+if(intentos==0){
+printf("Se ha superado el numero de intentos permitidos\n");
+   
+}
+        
+    
+    
+    float total=0,precio;
+    int cantidad;
+    
+    printf("calcula el importe de una factura: \n");
+    do {
+        printf("Introduce la cantidad de unidades vendidas (0 para terminat)\n ");
+        scanf("%d",&cantidad);
+        
+        if(cantidad ==0) {
+            break;
+        }
+        
+        printf("Introduce el precio unitario: \n");
+        scanf("%f",&precio);
+        
+        if(cantidad<0 , precio<0) {
+            printf("Error, la cantidad y el precio deben ser numeros positivod\n ");
+            continue;
+        }
+        total+=cantidad*precio;
+       } while(cantidad !=0);
+    
+    printf("El importe total de la factura es: $%.2f\n", total);
+    return 0;
+}
