@@ -1,0 +1,30 @@
+﻿#include <iostream>
+#include <cstring>
+
+int main() {
+    char nombre[20];
+    char contrasena[20];
+    int intentos = 3;
+
+    while (intentos > 0) {
+        std::cout << "Introduzca su nombre: ";
+        std::cin >> nombre;
+        std::cout << "Introduzca su contraseña: ";
+        std::cin >> contrasena;
+
+        if (strcmp(nombre, "root") == 0 && strcmp(contrasena, "1234") == 0) {
+            std::cout << "Bienvenido al sistema " << std::endl;
+            break;
+        } else {
+            std::cout << "Nombre de usuario o contraseña incorrectos. ";
+            std::cout << "Intentos restantes: " << (intentos - 1) << std::endl << std::endl;
+            intentos--;
+        }
+    }
+
+    if (intentos == 0) {
+        std::cout << "Se ha superado el número de intentos permitidos" << std::endl;
+    }
+
+    return 0;
+}
